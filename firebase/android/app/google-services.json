@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1097050210984",
+    "project_id": "signin-project-b5805",
+    "storage_bucket": "signin-project-b5805.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097050210984:android:083ad8a4172568cfc6789d",
+        "android_client_info": {
+          "package_name": "com.example.catanddog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzarqNIsxcBmm8Iy9Geec3PuSr8y6pEHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

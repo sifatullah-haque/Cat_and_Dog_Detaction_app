@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.grey.shade100,
         body: LoginPage(),
       ),
