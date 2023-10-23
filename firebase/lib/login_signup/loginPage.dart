@@ -1,4 +1,5 @@
 import 'package:catanddog/login_signup/components/squre_tile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'components/button/button.dart';
@@ -11,6 +12,11 @@ class LoginPage extends StatelessWidget {
   });
   final nameController = TextEditingController();
   final passwordController = TextEditingController();
+
+  Future<void> signUserMethod() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: nameController.text, password: passwordController.text);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +76,9 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 15.0,
             ),
-            const button(),
+            button(
+              onTap: signUserMethod,
+            ),
             const SizedBox(
               height: 15.0,
             ),
@@ -95,13 +103,13 @@ class LoginPage extends StatelessWidget {
             ),
 
             //google + apple logo
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SqureTile(
                   imagePath: "assets/google.png",
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 25.0,
                 ),
                 SqureTile(
